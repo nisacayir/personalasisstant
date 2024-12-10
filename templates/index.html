@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Asistan</title>
+</head>
+<body>
+    <h1>Kişisel Asistan</h1>
+
+    <h2>Sesli Komutlar</h2>
+    <form method="POST" action="/voice_command">
+        <button type="submit">Komut Ver</button>
+    </form>
+
+    <h2>Hava Durumu</h2>
+    <form method="POST" action="/get_weather">
+        <input type="text" name="city" placeholder="Şehir adı girin" required>
+        <button type="submit">Hava Durumunu Getir</button>
+    </form>
+
+    <h2>Takvim</h2>
+    <form method="POST" action="/add_event">
+        <input type="text" name="event_title" placeholder="Etkinlik Başlığı" required>
+        <input type="datetime-local" name="start_time" required>
+        <input type="datetime-local" name="end_time" required>
+        <button type="submit">Etkinlik Ekle</button>
+    </form>
+</body>
+</html>
